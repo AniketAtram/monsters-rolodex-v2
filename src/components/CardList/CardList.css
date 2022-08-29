@@ -1,0 +1,32 @@
+.card-index-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 40px 20px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-family: 'Amatic SC';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card:hover {
+    transition: transform 250ms ease-in-out;
+    transform: scale(1.125);
+    cursor: pointer;
+}
+
+.card:hover>img {
+    background-color: #3330E4;
+}

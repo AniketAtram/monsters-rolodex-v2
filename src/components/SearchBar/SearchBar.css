@@ -1,0 +1,11 @@
+.search-bar-index {
+    margin: 50px auto;
+}
+
+.search-box {
+    width: 24rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+}
