@@ -1,0 +1,9 @@
+.title-container {
+    margin: 70px auto;
+}
+
+.title-container>h1 {
+    font-family: 'Rubik Dirt';
+    font-size: 60px;
+    color: #FAEA48;
+}
