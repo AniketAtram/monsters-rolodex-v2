@@ -40,33 +40,37 @@ class App extends Component {
     });
 
     return (
-      <>
-        <div className='App'>
+      <div className='App'>
+        <div className='title-container'>
+          <h1>Monsters Rolodex</h1>
+        </div>
+        <div className='search-bar-index'>
           <input
             className="search-box"
             type="search"
-            placeholder="Search"
+            placeholder="Enter name to search"
             aria-label="Search"
             name='searchString'
             onChange={onSearchHandler}
           />
+        </div>
+        <div className='card-index-container'>
           {
             filteredData.map(data => {
             
-            return   (<div className="card" style={{ width: "18rem" }} key={data.id}>
+            return(   
+              <div className="card" key={data.id}>
                 <img src={`https://robohash.org/${data.id}?set=set2`} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <p className="card-title">{data.name}</p>
                 </div>
-              </div>)
-
+              </div>
+              )
             }
             )
           }
-
         </div>
-
-      </>
+      </div>
     );
   }
 }
