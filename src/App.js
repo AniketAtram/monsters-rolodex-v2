@@ -1,58 +1,73 @@
-import './App.css';
-import React, { Component } from 'react';
+import { useState, useEffect } from 'react';
 import Heading from './components/Heading/Heading';
 import SearchBar from './components/SearchBar/SearchBar';
 import CardList from './components/CardList/CardList';
-class App extends Component {
-    constructor() {
-        super();
+import './App.css';
+import NotFoundCard from './components/NotFoundCard/NotFoundCard';
 
-        this.state = {
-            monsters: [],
-            searchString: ''
-        }
-    }
-    // FETCH DATA FROM API WHENEVR APP IS LOADED
-    componentDidMount() {
-        this.fetchDataFromAPI();
-    }
-    // Helper function to fetch data from API 
-    fetchDataFromAPI = async () => {
+function App() {
+
+    
+    // Initialize the monsters array as empty 
+    const [monster, setMonsters] = useState([]);
+    
+    
+    // Initialize search string as empty string
+    const [searchString, setSearchString] = useState('');
+    
+    
+    // Filtered monsters state to hold filtered data
+    const [filteredData, setFilteredData] = useState(monster);
+
+    
+    // create a useEffect hook to fetch the data from the API and populate the monsters array
+    useEffect(() => {
+        fetchDataFromAPI();
+    }, []);
+
+    
+    // Use effect hook to render only when either monster array or search string is changed
+    useEffect(() => {
+        let filteredData = monster.filter((monster) => {
+            return monster.name.toLocaleLowerCase().includes(searchString.toLocaleLowerCase());
+        });
+        setFilteredData(filteredData);
+    }, [monster, searchString]);
+
+    
+    // Helper function to fetch the data from API
+    const fetchDataFromAPI = async () => {
         try {
             let response = await fetch("https://jsonplaceholder.typicode.com/users");
             let data = await response.json();
-            this.setState({ monsters: data });
+            setMonsters(data);
         }
         catch (error) {
             console.error(error.message);
         }
-    }
-    // Helper function for searching the data
-    onSearchHandler = (event) => {
+    };
+
+
+    // Event handler for change in search bar input value
+    const onSearchHandler = (event) => {
         let { value } = event.target;
-        this.setState({ searchString: value });
-    }
+        setSearchString(value);
+    };
 
-    render() {
 
-        let { monsters, searchString } = this.state;
-        let { onSearchHandler } = this;
-        let filteredData = monsters.filter((monster) => {
-            return monster.name.toLocaleLowerCase().includes(searchString.toLocaleLowerCase())
-        });
+    return (
+        <div className='App'>
 
-        return (
-            <div className='App'>
+            <Heading title="Monsters Rolodex" />
 
-                <Heading title="Monsters Rolodex" />
+            <SearchBar onChangeHandler={onSearchHandler} />
 
-                <SearchBar onChangeHandler={onSearchHandler} />
-
-                <CardList monstersData={filteredData} />
-
+            <div className='card-index-container'>
+                {filteredData.length !== 0?<CardList monstersData={filteredData}/>:<NotFoundCard/>}
+                
             </div>
-        );
-    }
+            
+        </div>
+    );
 }
-
 export default App;
