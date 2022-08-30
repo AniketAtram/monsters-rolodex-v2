@@ -3,6 +3,10 @@
 ## A simple application created using React JS concepts
 * DISCLAIMER: This application is part of Udemy's Zero to Mastery in React Course.  
 
+
+https://user-images.githubusercontent.com/60972814/187487931-4fe8e1f1-3aa7-40ca-a99c-4468518b20fe.mp4
+
+
 ## Available Scripts
 
 In the project directory, you can run:
