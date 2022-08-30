@@ -1,11 +1,70 @@
 # monsters-rolodex-v2
 
 ## A simple application created using React JS concepts
-* DISCLAIMER: This application is part of Udemy's Zero to Mastery in React Course.  
-
 
 https://user-images.githubusercontent.com/60972814/187487931-4fe8e1f1-3aa7-40ca-a99c-4468518b20fe.mp4
 
+### Overview:
+* This is a very basic application which was created to demonstrate the following React JS concepts
+    * What are components in react
+    * How each component is rendered in react
+    * What are class components and how to create them
+    * What are component life-cycle processed
+    * What are functional components
+    * What is the major difference between class and functional components
+    * What are hooks and how to create them
+    * The useState and useEffect hooks and their implementation
+### Libraries/External APIs Used
+* [Google Fonts]("https://fonts.google.com/")
+* [Bootstrap 5]("https://getbootstrap.com/docs/5.0/getting-started/download/")
+* [RoboHash]("https://robohash.org/")
+
+### Custom Components and Fonts used in the application
+<table>
+    <thead>
+        <tr>
+            <th>Component</th>
+            <th>Context</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Heading</td>
+            <td>Heading Text Font</td>
+            <td><a href="https://fonts.google.com/specimen/Rubik+Dirt">Rubik Dirt</a></td>
+        </tr>
+        <tr>
+            <td>SeachBar</td>
+            <td>Bootstrap 5 Search Input</td>
+            <td><a href="https://getbootstrap.com/docs/5.0/components/navbar/#supported-content">Search Bar</a></td>
+        </tr>
+        <tr>
+            <td>CardList</td>
+            <td>Bootstrap 5 Card</td>
+            <td><a href="https://getbootstrap.com/docs/5.0/components/card/#images">Bootstrap Card</a></td>
+        </tr>
+        <tr>
+            <td>CardList</td>
+            <td>Text Under Images</td>
+            <td><a href="https://fonts.google.com/specimen/Amatic+SC">Amatic SC</a></td>
+        </tr>
+        <tr>
+            <td>App</td>
+            <td>Background Gradient</td>
+            <td><a href="https://gradienthunt.com/gradient/27542">Gradient 27542</a></td>
+        </tr>
+    </tbody>
+</table>
+
+## ACKNOWLEDGMENT
+* This project could not have been made possible without the help of my instructor Mr. [Zhang M. Yihua]("https://github.com/ZhangMYihua").
+* This is a capstone project which is a part of [Zero-To-Mastery in React]("https://www.udemy.com/course/complete-react-developer-zero-to-mastery/") course and was recreated using the existing project which can be found [here]("https://github.com/ZhangMYihua/monsters-rolodex-v2")
+
+## Disclaimer
+* I am in no way affiliated with the parties mentioned above. Visitors must visit the link with their own discretion.
+* I do not take any gaurantee or warranty. The code is hosted on "as-is" basis
+* It was working when the app was created. If in future any link breaks, I will not be held responsible for it
 
 ## Available Scripts
 
