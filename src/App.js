@@ -3,6 +3,7 @@ import Heading from './components/Heading/Heading';
 import SearchBar from './components/SearchBar/SearchBar';
 import CardList from './components/CardList/CardList';
 import './App.css';
+import NotFoundCard from './components/NotFoundCard/NotFoundCard';
 
 function App() {
 
@@ -61,8 +62,11 @@ function App() {
 
             <SearchBar onChangeHandler={onSearchHandler} />
 
-            <CardList monstersData={filteredData} />
-
+            <div className='card-index-container'>
+                {filteredData.length !== 0?<CardList monstersData={filteredData}/>:<NotFoundCard/>}
+                
+            </div>
+            
         </div>
     );
 }

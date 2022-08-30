@@ -3,8 +3,8 @@ function CardList(props) {
 
     const { monstersData } = props;
     return (
-        <div className='card-index-container'>
-            {
+        <>
+             {
                 monstersData.map(data => {
 
                     return (
@@ -18,8 +18,8 @@ function CardList(props) {
                 }
                 )
             }
-        </div>
-    );
+        </>
+    )
 }
 
 export default CardList;
